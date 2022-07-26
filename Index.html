@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="esp" id="pantalla">
+    <head>
+         <meta charset="UTF-8">
+         <title>Encriptador de texto</title>
+         <link rel="stylesheet" href="style.css">
+         <link rel="stylesheet" href="reset.css">
+    </head>
+    <body>
+        <header id="header">
+            <img src="archivos/Vector.png" class="logo">
+        </header>
+        <main>
+        <section class="section-input">   
+            <textarea  class="text-in" rows="8" cols="40" maxlength="255" minlength="4" placeholder="Ingrese el texto aqui.." ></textarea>
+            <div class="bitacora">
+                <img src="archivos/bi_exclamation-circle-fill.png" class="logo2">
+                <h6 class="nota">Solo letras minúsculas y sin acentos</h6>
+            </div>
+            <div class="btn-encrip-desencrip">
+            <button type="button" onclick="btnencriptar(),visivilidad('div-salida','inline')" class="btnenc">Encriptar</button>
+            <button type="button" onclick="btndesencriptar(),visivilidad('div-salida','inline')" class="btndes">Desencriptar</button>
+            </div>
+        </section>
+        <section class="section-output">
+            <img src="archivos/Muñeco.png" class="logo3">
+            <div class="mensajes">
+                <h5 class="mensaje1">Ningún mensaje fue encontrado</h5>
+                <h5 class="mensaje2">Ingresa el texto que desees encriptar o desencriptar</h5>
+            </div>
+            <div id="div-salida">
+            <textarea class="text-out" rows="12" cols="30" maxlength="255" minlength="4" ></textarea>
+            <button type="button" onclick="btncopiar()" class="btncopy">Copiar!</button>
+            </div>
+        </section>
+        
+        </main>
+        <script src="encriptador.js"></script>
+    </body>
+
+</html>
