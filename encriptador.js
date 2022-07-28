@@ -45,9 +45,16 @@ function btncopiar(){
     console.log(textCopy.value);
     textCopy.select();
     document.execCommand('copy');
+    var pantalla = limpiarpantalla();
 }
 
 function visivilidad(id, visible){
     document.getElementById(id).style.display = visible ;
 
+}
+
+function limpiarpantalla(){
+    document.getElementById('div-salida').style.display = 'none';
+    document.getElementsByClassName("text-out")[0].value = "";
+    document.getElementsByClassName("text-in")[0].value = "";
 }
